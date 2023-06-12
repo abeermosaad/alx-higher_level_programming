@@ -11,7 +11,7 @@ if __name__ == "__main__":
         exit(1)
     else:
         if argv[2] == '+':
-            print("{} + {} = {}"
+            print('{} + {} = {}'
                   .format(int(argv[1]), argv[3], int(argv[1]) + int(argv[3])))
         elif argv[2] == '-':
             print("{} + {} = {}"
