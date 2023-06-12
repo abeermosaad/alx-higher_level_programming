@@ -15,6 +15,6 @@ if __name__ == "__main__":
         for i in range(4):
             if argv[2] == op[i]:
                 print('{} {} {} = {}'.format
-                      (int(argv[1]), argv[3], argv[2],
+                      (argv[1], argv[3], argv[2],
                        fun[i](int(argv[1]), int(argv[3]))))
                 exit(0)
