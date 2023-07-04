@@ -48,7 +48,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return (0)
         return (2 * (self.__width + self.__height))
-    
+
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         if type(rect_1) is not Rectangle:
@@ -73,7 +73,6 @@ class Rectangle:
 
     def __repr__(self):
         return f"Rectangle({self.__width}, {self.__height})"
-    
 
     def __del__(self):
         print("Bye rectangle...")
