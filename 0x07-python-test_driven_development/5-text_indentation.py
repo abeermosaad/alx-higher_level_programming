@@ -2,9 +2,9 @@
 """text_indentation module"""
 
 
-def text_indentation(text):
+def text_indentation(text=None):
     """text_indentation"""
-    if not isinstance(text, str):
+    if not isinstance(text, str) or text is None:
         raise TypeError("text must be a string")
     text1 = ""
     char_list = ['.', '?', ':']
