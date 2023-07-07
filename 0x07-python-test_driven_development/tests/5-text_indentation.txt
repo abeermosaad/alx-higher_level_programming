@@ -68,6 +68,12 @@ spaces around + specialCh.:
     abeer    .
     <BLANKLINE>
 
+text.text:
+    >>> text_indentation("   abeer.abeer")
+    abeer.
+    <BLANKLINE>
+    abeer
+
 new line:
     >>> text_indentation("   \n   ")
     <BLANKLINE>
