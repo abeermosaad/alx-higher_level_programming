@@ -16,7 +16,7 @@ def main():
 
     save_to_json_file(existing_data, 'add_item.json')
 
-    print(load_from_json_file('add_item.json'))
+    load_from_json_file('add_item.json')
 
 
 if __name__ == "__main__":
