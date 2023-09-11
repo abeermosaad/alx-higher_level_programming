@@ -1,5 +1,5 @@
 #!/usr/bin/node
-let len = process.argv.length - 2; const arr = [];
+let len = process.argv.length; const arr = [];
 if (len === 0 || len === 1) {
   console.log(0);
   process.exit();
