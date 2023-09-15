@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-
 """MySQLdb Module"""
+
 import MySQLdb
 from sys import argv
 
@@ -18,3 +18,5 @@ mycursor.execute("SELECT * FROM states ORDER BY ID ASC")
 result = mycursor.fetchall()
 for row in result:
     print(row)
+mycursor.close()
+mydb.close()
