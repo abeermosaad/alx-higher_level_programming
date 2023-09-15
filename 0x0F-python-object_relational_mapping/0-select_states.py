@@ -2,12 +2,15 @@
 
 """MySQLdb Module"""
 import MySQLdb
+from sys import argv
+
 
 mydb = MySQLdb.connect(
     host='localhost',
-    user='root',
-    passwd='root',
-    db='hbtn_0e_0_usa'
+    user=argv[1],
+    passwd=argv[2],
+    db=argv[3],
+    port=3306
 )
 mycursor = mydb.cursor()
 mycursor.execute("SELECT * FROM states ORDER BY ID ASC")
