@@ -14,7 +14,8 @@ if __name__ == '__main__':
     )
     mycursor = mydb.cursor()
 
-    query = """SELECT * FROM states WHERE name = '{}' ORDER BY ID ASC""".format(argv[4])
+    query = """SELECT * FROM states
+    WHERE BINARY name = '{}' ORDER BY ID ASC""".format(argv[4])
 
     mycursor.execute(query)
 
