@@ -2,6 +2,7 @@
 """lists all states from the database hbtn_0e_0_usa"""
 
 import MySQLdb
+import re
 from sys import argv
 
 if __name__ == '__main__':
@@ -13,11 +14,11 @@ if __name__ == '__main__':
         port=3306
     )
     mycursor = mydb.cursor()
-    string = argv[4].split('\';')
-    print(string[0])
+    x = re.match("[A-Za-z\s]+", argv[4])
+    print(x[0])
 
     query = """SELECT * FROM states
-    WHERE BINARY name = '{}' ORDER BY ID ASC""".format(string[0])
+    WHERE BINARY name = '{}' ORDER BY ID ASC""".format(x[0])
 
     mycursor.execute(query)
 
