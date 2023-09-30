@@ -12,7 +12,7 @@ if __name__ == '__main__':
 
     resp = response.json()
     for i in range(11):
-        n = resp[i]["commit"]["author"]["name"]
+        n = resp[i].get("commit").get("author").get("name")
         # response2 = requests.get(f'https://api.github.com/users/{n}')
         # resp2 = response2.json()
         print(f'{resp[i].get("sha")}: {n}')
